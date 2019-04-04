@@ -125,7 +125,7 @@ CGFloat const DVVSearchViewCancelButtonWidth = DVVSearchViewFontSize * 2.5;
         
     } completion:^(BOOL finished) {
         
-        _cancelButton.userInteractionEnabled = NO;
+        self.cancelButton.userInteractionEnabled = NO;
         
     }];
 }
@@ -144,15 +144,15 @@ CGFloat const DVVSearchViewCancelButtonWidth = DVVSearchViewFontSize * 2.5;
         
     } completion:^(BOOL finished) {
         
-        if (_placeholderText.length)
+        if (self.placeholderText.length)
         {
-            _textField.placeholder = _placeholderText;
+            self.textField.placeholder = self.placeholderText;
         }
         else
         {
-            _textField.placeholder = @"请输入搜索内容";
+            self.textField.placeholder = @"请输入搜索内容";
         }
-        _cancelButton.userInteractionEnabled = YES;
+        self.cancelButton.userInteractionEnabled = YES;
         
     }];
 }
